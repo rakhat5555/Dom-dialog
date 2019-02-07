@@ -1,21 +1,38 @@
-$(document).ready(function() {
-  $("button#cat").click(function() {
-    $("ul#cat-said").prepend("<li>purr</li>");
-    $("ul#dog-said").prepend("<li>wag</li>");
-  });
+$(document).ready(function(){
+  $("button#hello").click (function(){
+    $("ul#user").append("<li>Hello!</li>");
+    $("ul#webpage").append("<li>hello Rakhat!</li>");
 
-  $("button#dog").click(function() {
-    $("ul#cat-said").prepend("<li>hiss</li>");
-    $("ul#dog-said").prepend("<li>bark</li>");
-  });
-
-  $("button#look").click(function() {
-    $("ul#look").after("<img src='img/cat.jpeg' alt'the cat...>");
-    $("img").click(function() {
-      $(this).fadeOut();
+    $("ul#user").children("li").click(function(){
+      $(this).remove();
     });
+    $("ul#webpage").children("li").click(function(){
+      $(this).remove();
+    });
+
+    });
+
+  $("button#goodbye").click(function(){
+    $("ul#user").append("<li>goodbye</li>");
+    $("ul#webpage").append("<li>goodbye , see ya tomorrow!</li>");
+
+        $("ul#user").children("li").first().click(function(){
+          $(this).remove();
+        });
+        $("ul#webpage").children("li").first().click(function(){
+          $(this).remove();
+        });
   });
+  $("button#stop").click(function() {
+    $("ul#user").after("<li>stop coping me!</li>");
+      $("ul#webpage").after("<li>ok, May God bless You!</li>");
 
-
+          $("ul#user").children("li").first().click(function(){
+            $(this).remove();
+          });
+          $("ul#webpage").children("li").first().click(function(){
+            $(this).remove();
+          });
+  });
 
 });
